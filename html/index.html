@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script type="text/javascript" src="../js/index.js"></script>
+    <title>할일 체크리스트</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="title">해야 할일</h1>
+        <div class="content">
+            <div class="input_wrapper">
+                <input class="add_input" 
+                type="text" 
+                onkeyup="addByEnter()"
+                id="add_input">
+                <button class="submit_btn"
+                 type="submit" 
+                 onclick='addTodoList()'>추가</button>
+            </div>
+
+            <hr class="dividier">
+
+            <ul id="list_ul">
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

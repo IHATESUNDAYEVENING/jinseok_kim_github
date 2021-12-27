@@ -1,0 +1,35 @@
+body {
+    background: blanchedalmond;
+}
+
+.wrapper {
+    padding: 0;
+    margin: 30px 50px;
+}
+
+.title{ 
+    text-align: center;
+}
+
+.input_wrapper {
+    min-width: 300px;
+    text-align: center;
+}
+
+.add_input{
+    width: 80%;
+}
+
+.submit_btn{
+    width: 15%;
+}
+
+.dividier{
+    margin-top: 20px;
+    border-color: bisque;
+}
+
+.todo_list_li {
+    min-width: 300px;
+    
+}
