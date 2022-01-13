@@ -1,5 +1,4 @@
 window.onload = function () {
-
 }
 
 function addByEnter() {
@@ -10,13 +9,28 @@ function addByEnter() {
 
 function addTodoList() {
     const addValue = document.getElementById('add_input').value
+    const mainUl = document.getElementById(`list_ul`)
     if (addValue !== '') {
         var addLi = document.createElement('li');
-        addLi.innerHTML =  `<li class="todo_list_li">${addValue}<button class="delete_btn">삭제</button></li>`;   
-        document.getElementById('list_ul').appendChild(addLi);
-
+        addLi.innerHTML =
+            `<li class="todo_list_li" 
+                 id=todo_list_li_${new Date().valueOf()}>
+                    <input type="checkbox" class="todo_list_li_checkbox"/>
+                    ${addValue}
+                    <span
+                        class="delete_btn"
+                        onclick='deleteTodoList(event)'>
+                    </span>
+            </li>`;   
+        mainUl.appendChild(addLi);
         document.getElementById('add_input').value = ''
     } else {
         alert('할일을 입력하세요!')
     }
 }
+
+function deleteTodoList(e) {
+    let deletedLi = document.getElementById(e.path[1].id)
+    document.getElementById(`list_ul`).removeChild(deletedLi.parentNode)
+}
+
