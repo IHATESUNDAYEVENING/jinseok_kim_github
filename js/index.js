@@ -8,7 +8,6 @@ function addByEnter() {
 }
 
 function addTodoList() {
-    console.log('test');
     const addValue = document.getElementById('add_input').value
     const mainUl = document.getElementById(`list_ul`)
     if (addValue !== '') {
