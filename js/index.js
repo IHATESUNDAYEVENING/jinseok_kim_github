@@ -3,15 +3,15 @@ window.onload = function () {
 
 function addByEnter() {
     if (window.event.keyCode == 13) {
-        addTodoList();
+        addTodoList()
     }
 }
 
 function addTodoList() {
     const addValue = document.getElementById('add_input').value
-    const mainUl = document.getElementById(`list_ul`)
     if (addValue !== '') {
-        var addLi = document.createElement('li');
+        const mainUl = document.getElementById(`list_ul`)
+        var addLi = document.createElement('li')
         addLi.innerHTML =
             `<li class="todo_list_li" 
                  id=todo_list_li_${new Date().valueOf()}>
@@ -20,11 +20,12 @@ function addTodoList() {
                     <span
                         class="delete_btn"
                         onclick='deleteTodoList(event)'>
+                        x
                     </span>
-            </li>`;   
+            </li>`   
         mainUl.appendChild(addLi);
         document.getElementById('add_input').value = ''
-    } else {
+    }else {
         alert('할일을 입력하세요!')
     }
 }
